@@ -1,0 +1,11 @@
+<div [class]="{'grid-day':true, 'gary': !day.isNowMonth, 'red': day.isToday, 'holiday': day.isHoliday}"  (click)="changeSelectDate()">
+    <div [class]="{'day':true, 'day_today':day.isToday, 'day_select': day.isSelectDay}"> {{ day.date | date:'d' }} </div>
+    <div class="previewTodo"> 
+    <ul>
+        <ng-container *ngFor=" let schedule of day.schedules; let i = index">
+        <li *ngIf="i < 2"> {{ schedule.content }}</li>
+        </ng-container>
+        <li *ngIf="day.schedules.length>2">還有其他{{ day.schedules.length-2 }}項</li>
+    </ul> 
+    </div>
+</div>

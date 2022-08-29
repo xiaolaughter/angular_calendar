@@ -1,0 +1,82 @@
+#contianerBar{
+    width: 35vw;
+    height: 100vh;
+    background: aliceblue;
+  }
+
+  #day{
+    width: 100%;
+    height: calc(14vh + 20px);
+    font-size: 100px;
+    text-align: center;
+    line-height: calc(14vh + 20px);
+    color: #3e85fa;
+  }
+
+  #month_year{
+    width: 100%;
+    height: 5vh;
+    background: #d5f2ff;
+    text-align: center;
+    font-size: 23px;
+    color: #2374ba;
+    line-height: 5vh;
+  }
+
+  #todoList{
+    width: 100%;
+    height: calc(81vh - 20px);
+  }
+
+  .todolist-none{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .listItem-checkbox{
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .listItem-text{
+    margin-left: 5px;
+    margin-right: 10px;
+    flex-grow: 1;
+    max-width: 80%;
+    text-overflow: ellipsis;
+  }
+
+  .listItem-edit{
+    
+  }
+
+  .listItem-del{
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+  }
+
+  .listItem-del::after{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    content: "\00d7";
+  }
+
+  .listItem-del:hover::after{
+    width: 100%;
+    height: 100%;
+    background: gainsboro;
+    border-radius: 20px;
+    display: inline-block;
+    content: "\00d7";
+  }

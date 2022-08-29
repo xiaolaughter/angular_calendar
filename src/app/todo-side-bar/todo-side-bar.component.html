@@ -1,0 +1,17 @@
+<div id="contianerBar">
+    <div id="day"> {{ selectDate | date:'dd' }} </div>
+    <div id="month_year"> {{ selectDate | dateMonthName }} </div>
+    <div id="todoList" [class]="{'todolist-none': schedule.length===0}" (dblclick) ="addScheduleItem()">
+      <div *ngIf="schedule.length===0">double click here to add new ToDoList</div>
+      <ng-container *ngFor="let listItem of schedule">
+          <div class="listItem">
+            <input type="checkbox" class="listItem-checkbox" [(ngModel)]="listItem.state">
+            <div class="listItem-text">
+              <input *ngIf="listItem.edit===true"  placeholder="input ToDoList " class="listItem-edit" appFocusElement type="text" [(ngModel)]="listItem.content" (blur)="verifyToDoListContent(listItem)" (keyup)="keyupVerifyToDoListContent(listItem, $event)">
+              <div *ngIf="listItem.edit===false" (click)="changeEdit(listItem, true)" >{{listItem.content}}</div>
+            </div>
+            <div class="listItem-del" (click)="deleteScheduleItem(listItem)" ></div>
+          </div>
+        </ng-container>
+    </div>
+  </div>

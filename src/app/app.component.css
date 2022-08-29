@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .calendar {
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .week {
+    height: 5vh;
+    width: calc(65vw * 0.95 / 7);
+  }
+
+  .month_switch{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+  }
+
+  .month_switch_text{
+    line-height: 5vh;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0199ed;
+  }
+
+  .month_switch input{
+    margin-right: 15px;
+    margin-left: 15px;
+    appearance: none;
+    border: 0px;
+    background: none;
+    font-weight: bold;
+  }
+
+  #contianerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+
+    color: aliceblue;
+    font-size: 51px;
+    width: 100vw;
+    height: 25vh;
+    background: repeating-linear-gradient(135deg, #2B3284 /*0px*/, #47a5fc 100px, #4177BC 100px, #4177BC 105px, #2B3284 105px, #2B3284 130px, #3a62c3 130px, #4177BC 260px, #47a5fc 260px, #fff 265px, #4177BC 265px, #4177BC 270px, #547bd8 270px, #547bd8 330px );
+  }
+
+  .weeknormalday{
+    background: #eaf5ff;
+    color: #6ba8ff;
+    line-height: 5vh;
+    text-align: center;
+  }
+
+  .weekholiday{
+    background: #c0deff;
+    color: #0007ff;
+    line-height: 5vh;
+    text-align: center;
+  }
+
+  
+
+  .container_week{
+    width: calc(95% / 7);
+    text-align: center;
+    line-height: 5vh;
+    font-family: cursive;
+    font-weight: 900;
+  }
